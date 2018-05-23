@@ -4,19 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <title>Météo</title>
 </head>
     <body>
-        <form class="form-inline">
-            <div class="form-group mb-2">
-                <label for="staticEmail2" class="sr-only">Email</label>
-                <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
+        <div class="container mt-4">
+            <form id ="weather" class="mb-5">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label for="city" class="sr-only">Renseignez une ville</label>
+                            <input type="text" class="form-control" id="city" placeholder="Renseignez une ville" />
+                            <div class="invalid-feedback">Merci de renseigner une ville valide.</div>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <button type="submit" class="btn btn-primary">Rechercher</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="card d-none" style="width: 18rem;">
+                <div class="text-center">
+                    <img class="image-weather" src="" alt="" width="50" height="50" />
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <div class="card-text">
+                        <p class="description-weather"></p>
+                        <p>
+                            <strong>Température :</strong> <span class="temp-weather"></span><br />
+                            <strong>Max :</strong> <span class="temp-max-weather"></span>
+                            <strong>Min :</strong> <span class="temp-min-weather"></span>
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="form-group mx-sm-3 mb-2">
-                <label for="inputPassword2" class="sr-only">Password</label>
-                <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
-            </div>
-            <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
-          </form>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+        <script src="assets/js/main.js"></script>
     </body>
 </html>
